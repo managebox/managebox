@@ -1,0 +1,9 @@
+# ManageBox - General Routing
+manage_box_model:
+    resource: "@ManageBoxModelBundle/Resources/config/routing.yml"
+    prefix:   /
+
+manage_box_front:
+    resource: "@ManageBoxFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+

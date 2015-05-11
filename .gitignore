@@ -26,6 +26,9 @@
 /web/bundles/
 /web/uploads/
 
+# Symfony Installer
+/symfony
+
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml

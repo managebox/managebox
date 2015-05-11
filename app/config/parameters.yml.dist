@@ -1,0 +1,26 @@
+# ManageBox - Parameters
+parameters:
+    # Databases Config
+    database_driver:        pdo_mysql
+    database_host:          127.0.0.1
+    database_port:          ~
+    database_name:          symfony
+    database_user:          root
+    database_password:      ~
+
+    # Mail Config
+    mailer_transport:       smtp
+    mailer_host:            127.0.0.1
+    mailer_user:            ~
+    mailer_password:        ~
+
+    # General Config
+    locale:                 fr
+    secret:                 ThisTokenIsNotSoSecretChangeIt
+
+    # Binaries Config
+    #   Node
+    node_bin:               "/path/to/node"
+    node_modules:           "/path/to/node/modules"
+    #   Java
+    java_bin:               "/path/to/java"

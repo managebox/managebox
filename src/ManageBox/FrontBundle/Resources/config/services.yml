@@ -1,0 +1,4 @@
+services:
+#    manage_box_front.example:
+#        class: ManageBox\FrontBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
