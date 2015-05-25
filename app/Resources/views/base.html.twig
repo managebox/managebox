@@ -2,12 +2,64 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}ManageBox.com - {% endblock %}</title>
+        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- CSS -->
+        {% stylesheets
+            filter='less,?yui_css'
+            output='css/main.css'
+            '@bootstrap_css'
+            '@awesome_css'
+            '@ManageBoxModelBundle/Resources/private/less/styles.less'
+        %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+        {% endstylesheets %}  
+        {% block stylesheets %}{% endblock stylesheets %}      
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <!-- Fixed navbar -->
+    <nav  id="navbar" class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Manage-Box.com <i class="fa fa-bed"></i> TEST</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span> Maxime Cornet <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Modifier mon profil</a></li>
+                            <li><a href="#">Se Déconnecter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+        {% block body %}{% endblock body %}
+
+        <!-- JS Include -->
+        {% javascripts
+            '@jquery'
+            '@bootstrap_js'
+            '@ManageBoxModelBundle/Resources/private/js/scripts.js'
+            output='js/main.js'
+            filter='?yui_js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        <!-- JS -->
         {% block javascripts %}{% endblock %}
     </body>
 </html>

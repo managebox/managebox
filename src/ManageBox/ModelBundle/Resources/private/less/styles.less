@@ -1,0 +1,33 @@
+// Imports
+@import "variables.less";
+
+// General
+body {
+	background-color: @bodyBackground;
+}
+
+#navbar {
+	background-color: #438EB9;
+	border-bottom: 0px;
+
+	a {
+		color: white;
+	}
+	
+	.nav {
+		a:active, a:hover , .active, .open > a, .open > a:focus, .open > a:hover  {
+			background-color: #62A8D1 !important;
+		}
+
+		a:visited , a:link {
+			background-color: transparent;
+		}
+
+		.dropdown-menu {
+			a {
+				color: black;	
+			}
+		}
+	}
+	
+}
